@@ -14,15 +14,15 @@ null=data.isnull().sum()
 print(null)
 
 
-# The bar chart tells us regarding the possibility of heart disease for individual ages.
-# It is clear that people above 50 are highly prone to heart diseases.
+# The bar chart tells us regarding the possibility of heart disease for Gender. 
+# It is clear that Male are highly prone to heart diseases.
 plt.figure(figsize = (15,7))
-sns.barplot(data.Age, data.HeartDisease, color="skyblue",errcolor=".2", edgecolor=".2")
+sns.barplot(data.Sex, data.HeartDisease, color="skyblue",errcolor=".2", edgecolor=".2")
 plt.show()
 
 # Plotting Histograms
 fig, axes = plt.subplots(3, 2 , figsize=(14, 10))
-sns.histplot(data['Age'], ax=axes[0, 0])
+sns.histplot(data['Sex'], ax=axes[0, 0])
 sns.histplot(data['RestingBP'], ax=axes[1, 0])
 sns.histplot(data['Cholesterol'], ax=axes[0, 1])
 sns.histplot(data['Oldpeak'], ax=axes[2, 0])
